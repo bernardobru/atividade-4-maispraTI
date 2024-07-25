@@ -1,0 +1,17 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parallax {
+    background-image: url(../images/lorem-ipsum.jpg);
+    min-height: 100dvh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+.carousel {
+    width: 3em;
+    margin: 0 auto;
+}
