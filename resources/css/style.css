@@ -12,6 +12,6 @@ body, html {
     background-size: cover;
 }  
 .carousel {
-    width: 3em;
+    width: 50%;
     margin: 0 auto;
 }
