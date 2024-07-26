@@ -13,36 +13,41 @@
 </head>
 
 <body>
-  <header class="bg-light">
-    <h1 class="text-center h1">Cestas +Brasil</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="resources/images/logo.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-text-top">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <button class="nav-link active" aria-current="page">Início</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link">Produtos</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" href="#about">Sobre</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link">Contato</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <header class="text-white">
+    <div class="container d-flex justify-content-center flex-column align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="resources/images/logo.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-text-top">
+      </a>
+      <h1 class="h2">Cestas +Brasil</h1>
+      <p class="text-center fs-5 text d-block">
+        Alimentando esperanças, uma cesta de cada vez.
+      </p>
+    </div>
   </header>
+  <nav class="navbar navbar-expand-sm sticky-top">
+    <div class="container-fluid fs-3 text">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <button class="nav-link active" aria-current="page">Início</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" onclick="request('content/products.html')">Produtos</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link">Sobre</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link">Contato</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
     <section class="parallax">
@@ -65,18 +70,8 @@
           alt="">
       </div>
     </section>
-    <section id="contact">
-      <h1>Contact</h1>
-      <fieldset>
-        <form action="">
-          <label for="nome">Nome:</label>
-          <input id="nome" type="text">
-          <label for="email">Email</label>
-          <input type="email" id="email">
-          <input name="" id="" class="btn btn-primary" type="button" value="enviar" />
+    <section id="content">
 
-        </form>
-      </fieldset>
     </section>
   </main>
 
@@ -116,7 +111,7 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script src="resources/js/carousel.js"></script>
+  <script src="resources/js/index-carousel.js"></script>
+  <script src="resources/js/requests.js"></script>
 </body>
-
 </html>

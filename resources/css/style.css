@@ -4,11 +4,18 @@ body, html {
     box-sizing: border-box;
 }
 header {
-    padding: 1em 1em 0 1em;
+    padding: 0.25em;
+    background-color: #42332e;
+}
+nav {
+    background: linear-gradient(180deg, rgba(66,51,46,1) 0%, rgb(75, 63, 59) 28%, rgb(104, 82, 77) 100%);;
+}
+nav ul li a {
+    cursor: pointer;
 }
 .parallax {
-    background-image: url(../images/lorem-ipsum.jpg);
     min-height: 100dvh;
+    background-image: url(../images/sweden-landscape.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,10 +26,12 @@ header {
     margin: 0 auto;
 }
 @media only screen and (max-width: 600px) {
-    .navbar-brand {
-        display: none;
-    }
     .parallax {
-        background: none;
+        min-height: 100dvh;
+        background-image: url(../images/sweden-landscape.jpeg);
+        background-attachment: scroll;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
