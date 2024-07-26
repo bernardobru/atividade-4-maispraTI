@@ -3,6 +3,9 @@ body, html {
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    padding: 1em 1em 0 1em;
+}
 .parallax {
     background-image: url(../images/lorem-ipsum.jpg);
     min-height: 100dvh;
@@ -14,4 +17,12 @@ body, html {
 .carousel {
     width: 50%;
     margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        display: none;
+    }
+    .parallax {
+        background: none;
+    }
 }
