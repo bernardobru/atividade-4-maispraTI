@@ -100,4 +100,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if(document.body.contains(document.getElementById('listProducts'))){
         loadPurchases();
     }
-});
+})
