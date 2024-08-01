@@ -13,25 +13,18 @@ const priceBig = products[2].price;
 let cart = JSON.parse(localStorage.getItem('cart'));
 
 function addProduct(id) {
-    
     const product = products.find((product) => product.id === id);
+    console.log(product);
     if(cart.length === 0) {
+        product.quantity++;
         cart.push(product);
-    } else if(cart.length !== 0) {
-        /*const res = cart.find((element) => {element.id === id});*/
-        for(let products of cart) {
-            if(products.quantity) {
-                products.quantity++;
-                if(products.price === priceSmall) {
-                    products.price = priceSmall * products.quantity;
-                } else if(products.price === priceMedium) {
-                    products.price = priceMedium * products.quantity;
-                } else if(products.price === priceBig) {
-                    products.price = priceBig * products.quantity;
-                }
-            }
-        }
-    } 
+    } else if(cart.find((product) => product.id === id)) {
+        product.quantity++;
+        product.quantityPrice = product.price * product.quantity;
+    } else {
+        product.quantity++;
+        cart.push(product);
+    }
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 function removeProduct(id) {
@@ -39,7 +32,6 @@ function removeProduct(id) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 function updateQuantity(id, quantity) {
-    
     for(let product of cart) {
         if(product.id === id) {
             product.quantity = quantity;
