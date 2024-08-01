@@ -1,18 +1,18 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "price": 100.00,
         "img": "../resources/images/cesta-basica-pequena.png",
         "quantity": 1
     },
     {
-        "id": 1,
+        "id": 2,
         "price": 150.00,
         "img": "../resources/images/cesta-basica-media.png",
         "quantity": 1
     },
     {
-        "id": 2,
+        "id": 3,
         "price": 200.00,
         "img": "../resources/images/cesta-basica-grande.png",
         "quantity": 1

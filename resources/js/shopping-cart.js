@@ -7,31 +7,49 @@ then((response) => {
     if(!localStorage.getItem('cart')) localStorage.setItem('cart',"[]");
 });
 const products = JSON.parse(localStorage.getItem('produtos'));
-const cart = JSON.parse(localStorage.getItem('cart'));
+const priceSmall = products[0].price;
+const priceMedium = products[1].price;
+const priceBig = products[2].price;
+let cart = JSON.parse(localStorage.getItem('cart'));
+
 function addProduct(id) {
+    
     const product = products.find((product) => product.id === id);
     if(cart.length === 0) {
         cart.push(product);
-    } else {
-        const res = cart.find((element) => {element.id === id}); 
-        if(res === undefined) cart.push(product);
+    } else if(cart.length !== 0) {
+        /*const res = cart.find((element) => {element.id === id});*/
+        for(let products of cart) {
+            if(products.quantity) {
+                products.quantity++;
+                if(products.price === priceSmall) {
+                    products.price = priceSmall * products.quantity;
+                } else if(products.price === priceMedium) {
+                    products.price = priceMedium * products.quantity;
+                } else if(products.price === priceBig) {
+                    products.price = priceBig * products.quantity;
+                }
+            }
+        }
     } 
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 function removeProduct(id) {
-    const temp = cart.filter(product => product.id !== id);
-    localStorage.setItem('cart', JSON.stringify(temp));
+    cart = cart.filter(product => product.id !== id)
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 function updateQuantity(id, quantity) {
+    
     for(let product of cart) {
-        if(product.id === id) product.quantity = quantity;
+        if(product.id === id) {
+            product.quantity = quantity;
+            product.price *= quantity
+        }
     }
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 function getTotal() {
-    const temp = cart.map((product) => {
-        parseFloat(product.price);
-    });
-    const sum = temp.reduce((prev, next) => {prev + next;}, 0);
+    console.log(cart);
+    const sum = cart.reduce((prev, current) => {return prev + current.price}, 0);
     console.log(sum)
 }

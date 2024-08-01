@@ -46,6 +46,7 @@
           </li>
         </ul>
       </div>
+      <span id="shopping-cart" onclick="getContent('pages/shopping-cart.html')"><img src="resources/images/icons8-shopping-cart-50.png" alt="icone de carrinho de super mercado"></span>
     </div>
   </nav>
 
@@ -71,7 +72,15 @@
       </div>
     </section>
     <section id="content">
-
+      <button class="btn btn-primary" onclick="addProduct(1)">Adicionar id 0</button>
+      <button class="btn btn-primary" onclick="addProduct(2)">Adicionar id 1</button>
+      <button class="btn btn-primary" onclick="addProduct(3)">Adicionar id 2</button>
+      <button class="btn btn-info" onclick="getTotal()">Valor Total</button>
+      <input type="number" id="update-quantity">
+      <button class="btn btn-secondary" onclick="updateQuantity(1, parseFloat(document.getElementById('update-quantity').value))">Atualizar</button>
+      <button class="btn btn-danger" onclick="removeProduct(1)">Excluir do carrinho</button>
+      <button class="btn btn-danger" onclick="removeProduct(2)">Excluir do carrinho</button>
+      <button class="btn btn-danger" onclick="removeProduct(3)">Excluir do carrinho</button>
     </section>
   </main>
 
@@ -112,7 +121,7 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="resources/js/index-carousel.js"></script>
-  <script src="resources/js/products-carousel.js"></script>
+  <script src="resources/js/shopping-cart.js"></script>
   <script src="resources/js/requests.js"></script>
 </body>
 </html>
