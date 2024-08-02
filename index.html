@@ -12,16 +12,19 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
-  <header class="text-white">
-    <div class="container d-flex justify-content-center flex-column align-items-center">
-      <a class="navbar-brand" href="#">
-        <img src="resources/images/logo.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-text-top">
+<body class="parallax">
+  <header class="text-white container-fluid">
+    <div class="d-flex justify-content-center align-items-center row">
+      <a class="navbar-brand col-md-3" href="#">
+        <img src="resources/images/logo.png" alt="Logo" height="100px" width="100px" id="logo" class="d-inline-block align-text-top">
       </a>
-      <h1 class="h2">Cestas +Brasil</h1>
-      <p class="text-center fs-5 text d-block">
-        Alimentando esperanças, uma cesta de cada vez.
-      </p>
+      <div class="d-flex flex-column justify-content-center col-md-6">
+        <h1 class="h2 text-center">Cestas +Brasil</h1>
+        <p class=" text-center fs-5 text d-block">
+          Alimentando esperanças, uma cesta de cada vez.
+        </p>
+      </div>
+      <div class="col-md-3"></div>
     </div>
   </header>
   <nav class="navbar navbar-expand-sm sticky-top">
@@ -33,16 +36,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <button class="nav-link active" aria-current="page">Início</button>
+            <button class="nav-link text-white" aria-current="page" onclick="getContent('pages/home.html')">Início</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" onclick="getContent('pages/products.html')">Produtos</button>
+            <button class="nav-link text-white" onclick="getContent('pages/products.html')">Produtos</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link">Sobre</button>
+            <button class="nav-link text-white">Sobre</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link">Contato</button>
+            <button class="nav-link text-white">Contato</button>
           </li>
         </ul>
       </div>
@@ -50,37 +53,20 @@
     </div>
   </nav>
 
-  <main>
-    <section class="parallax">
+  <main >
+    <section>
       <div class="carousel">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/31707975127-d2f019f60f-o.jpg?w=1280&format=webp"
-          alt="">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/42916480792-cd4b5fcfdf-o.jpg?w=1280&format=webp"
-          alt="">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/51220197450-f7f9bb9095-o.jpg?w=1280&format=webp"
-          alt="">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/caldwell-69.jpg?w=1280&format=webp" alt="">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/52046774635-780565829e-o.jpg?w=1280&format=webp"
-          alt="">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/52701084449-de7a94cac7-o.jpg?w=1280&format=webp"
+        <img src="resources/images/cesta-basica.jpg"
           alt="">
         <img
-          src="https://science.nasa.gov/wp-content/uploads/2023/07/hubble-space-telescope-hst-4.jpg?w=1280&format=webp"
+          src="resources/images/mercado-verduras.jpg"
           alt="">
-        <img src="https://science.nasa.gov/wp-content/uploads/2023/07/31723267037-786d732804-o.jpg?w=1280&format=webp"
+        <img src="resources/images/Cestas-basicas.jpg"
           alt="">
       </div>
     </section>
     <section id="content">
-      <button class="btn btn-primary" onclick="addProduct(1)">Adicionar id 1</button>
-      <button class="btn btn-primary" onclick="addProduct(2)">Adicionar id 2</button>
-      <button class="btn btn-primary" onclick="addProduct(3)">Adicionar id 3</button>
-      <button class="btn btn-info" onclick="getTotal()">Valor Total</button>
-      <input type="number" id="update-quantity">
-      <button class="btn btn-secondary" onclick="updateQuantity(1, parseFloat(document.getElementById('update-quantity').value))">Atualizar</button>
-      <button class="btn btn-danger" onclick="removeProduct(1)">Excluir do carrinho</button>
-      <button class="btn btn-danger" onclick="removeProduct(2)">Excluir do carrinho</button>
-      <button class="btn btn-danger" onclick="removeProduct(3)">Excluir do carrinho</button>
+      
     </section>
   </main>
 

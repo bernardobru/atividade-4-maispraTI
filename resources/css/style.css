@@ -15,7 +15,7 @@ nav ul li a {
 }
 .parallax {
     min-height: 100dvh;
-    background-image: url(../images/sweden-landscape.jpeg);
+    background-image: url(../images/estoque-mercado.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,6 +24,8 @@ nav ul li a {
 .carousel {
     width: 50%;
     margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 #shopping-cart {
     background-color: #ffffff94;
@@ -35,13 +37,33 @@ nav ul li a {
     transition: 0.45s;
     cursor: pointer;
 }
+#content {
+    background-color: #ffffff;
+    padding: 2em;
+}
 .width-50 {
     width: 50%;
+}
+.product {
+    border: 1px solid;
+}
+.product:hover {
+    background-color: #eeeeee;
+}
+@media only screen and (max-width: 1024) {
+    .parallax{
+        min-height: 100dvh;
+        background-image: url(../images/estoque-mercado\ -medio.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 @media only screen and (max-width: 600px) {
     .parallax {
         min-height: 100dvh;
-        background-image: url(../images/sweden-landscape.jpeg);
+        background-image: url(../images/estoque-mercado\ -pequeno.jpg);
         background-attachment: scroll;
         background-position: center;
         background-repeat: no-repeat;

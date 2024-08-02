@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => getContent('pages/home.html'))
 function getContent(url) {
     window.document.getElementById('content').innerHTML = '';
     const ajax = new XMLHttpRequest();
@@ -10,7 +11,7 @@ function getContent(url) {
             }
         } 
         if(ajax.status === 404) {
-            console.error(`O arquivo não foi encontrado:\n ${ajax.status}`);
+            console.error(`O arquivo não foi encontrado:\ncódigo de erro ${ajax.status}`);
             document.getElementById('content').innerHTML = 
             `<div>
             <h1>ERRO 404</h1>
