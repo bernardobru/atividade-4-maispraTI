@@ -11,16 +11,6 @@ fetch('resources/js/products.json')
 
 const products = JSON.parse(localStorage.getItem('produtos'));
 let cart = JSON.parse(localStorage.getItem('cart'));
-
-document.addEventListener('DOMContentLoaded', () => {
-    const price1 = cart.find(product => product.id === 1);
-    const price2 = cart.find(product => product.id === 2);
-    const price3 = cart.find(product => product.id === 3);
-    document.getElementById('price1').innerHTML = `Quantidade: ${price1.quantity}\nTotal: R$ ${price1.quantityPrice}`;  
-    document.getElementById('price2').innerHTML = `Quantidade: ${price2.quantity}\nTotal: R$ ${price2.quantityPrice}`;  
-    document.getElementById('price3').innerHTML = `Quantidade: ${price3.quantity}\nTotal: R$ ${price3.quantityPrice}`;
-})
- 
 function addProduct(id) {
     const product = products.find(product => product.id === id);
     if(cart.length === 0) {
