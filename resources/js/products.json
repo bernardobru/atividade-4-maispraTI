@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "price": 100.00,
+        "name": "Cesta básica pequena",
+        "quantityPrice": 100.00,
+        "img": "../resources/images/cesta-basica-pequena.png",
+        "quantity": 0
+    },
+    {
+        "id": 2,
+        "price": 150.00,
+        "name": "Cesta básica média",
+        "quantityPrice": 150.00,
+        "img": "../resources/images/cesta-basica-media.png",
+        "quantity": 0
+    },
+    {
+        "id": 3,
+        "price": 200.00,
+        "name": "Cesta básica grande",
+        "quantityPrice": 200.00,
+        "img": "../resources/images/cesta-basica-grande.png",
+        "quantity": 0
+    }
+]

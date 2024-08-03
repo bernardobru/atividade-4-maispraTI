@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    overflow-x: hidden; 
+}
+header {
+    padding: 0.25em;
+    background-color: #42332e;
+}
+nav {
+    background: linear-gradient(180deg, rgba(66,51,46,1) 0%, rgb(75, 63, 59) 28%, rgb(104, 82, 77) 100%);;
+}
+nav ul li a {
+    cursor: pointer;
+}
+.parallax {
+    min-height: 100dvh;
+    background-image: url(../images/estoque-mercado.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+.carousel {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#shopping-cart {
+    background-color: rgb(104, 82, 77);
+    border-radius: 50%;
+    padding: 8px;
+}
+#shopping-cart:hover{
+    background-color: #ffffff33;
+    transition: 0.45s;
+    cursor: pointer;
+}
+#content {
+    padding: 2em;
+}
+.content-page {
+    background-color: #ffffff4f;
+}
+.width-50 {
+    width: 50%;
+}
+.product {
+    border: 1px solid;
+    border-radius: 5px;
+    gap: 5px;
+    padding: 1em;
+    background-color: #ffffff;
+}
+.product:hover {
+    background-color: #eeeeee;
+}
+#footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
+    .parallax{
+        min-height: 100dvh;
+        background-image: url(../images/estoque-mercado\ -medio.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #footer.menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .parallax {
+        min-height: 100dvh;
+        background-image: url(../images/estoque-mercado\ -pequeno.jpg);
+        background-attachment: scroll;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #footer.menu {
+        display: block;
+        float: left;
+    }
+}

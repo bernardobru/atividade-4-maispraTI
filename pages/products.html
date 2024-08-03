@@ -1,0 +1,39 @@
+<div class="bg-light p-3 rounded container">
+    <div id="productsParent" class="container">
+        <div id="products" class="row">
+            <div class="product col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column">
+                <img src="../resources/images/cesta-basica-pequena.png" alt="cesta pequena">
+                <p class="text-center">Cesta básica pequena - R$100,00</p>
+                <button class="btn btn-primary" onclick="addProduct(1)">Adicionar ao carinho</button>
+                <span id="price1">Quantidade: 0 Total: R$ 0,00</span>
+                <button class="btn btn-warning" onclick="updateQuantity(1, parseFloat(document.getElementById('update-quantity1').value))">Editar quantidade</button>
+                <div class="input-group">
+                    <input class="form-control" type="number" placeholder="Quantidade" id="update-quantity1">
+                </div>
+                <button class="btn btn-danger" onclick="removeProduct(1)">Excluir do carrinho</button>
+            </div>
+            <div class="product col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column">
+                <img src="../resources/images/cesta-basica-media.png" alt="cesta media">
+                <p class="text-center">Cesta básica pequena - R$150,00</p>
+                <button class="btn btn-primary" onclick="addProduct(2)">Adicionar ao carrinho</button>
+                <span id="price2">Quantidade: 0 Total: R$ 0,00</span>
+                <button class="btn btn-warning" onclick="updateQuantity(2, parseFloat(document.getElementById('update-quantity2').value))">Editar quantidade</button>
+                <div class="input-group">
+                    <input class="form-control" type="number" placeholder="Quantidade" id="update-quantity2">
+                </div>
+                <button class="btn btn-danger" onclick="removeProduct(2)">Excluir do carrinho</button>
+            </div>
+            <div class="product col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column">
+                <img src="../resources/images/cesta-basica-grande.png" alt="">
+                <p class="text-center">Cesta básica pequena - R$200,00</p>
+                <button class="btn btn-primary" onclick="addProduct(3)">Adicionar ao carrinho</button>
+                <span id="price3">Quantidade: 0 Total: R$ 0,00</span>
+                <button class="btn btn-warning" onclick="updateQuantity(3, parseFloat(document.getElementById('update-quantity3').value))">Editar quantitade</button>
+                <div class="input-group">
+                    <input class="form-control" type="number" placeholder="Quantidade" id="update-quantity3">
+                </div>
+                <button class="btn btn-danger" onclick="removeProduct(3)">Excluir do carrinho</button>
+            </div>
+        </div>
+    </div>
+</div>
