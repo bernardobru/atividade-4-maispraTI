@@ -1,7 +1,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    overflow-x: hidden; 
 }
 header {
     padding: 0.25em;
@@ -27,8 +28,9 @@ nav ul li a {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
 #shopping-cart {
-    background-color: #ffffff94;
+    background-color: rgb(104, 82, 77);
     border-radius: 50%;
     padding: 8px;
 }
@@ -38,19 +40,29 @@ nav ul li a {
     cursor: pointer;
 }
 #content {
-    background-color: #ffffff;
     padding: 2em;
+}
+.content-page {
+    background-color: #ffffff4f;
 }
 .width-50 {
     width: 50%;
 }
 .product {
     border: 1px solid;
+    border-radius: 5px;
+    gap: 5px;
+    padding: 1em;
+    background-color: #ffffff;
 }
 .product:hover {
     background-color: #eeeeee;
 }
-@media only screen and (max-width: 1024) {
+#footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
     .parallax{
         min-height: 100dvh;
         background-image: url(../images/estoque-mercado\ -medio.jpg);
@@ -59,6 +71,13 @@ nav ul li a {
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #footer.menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+    
 }
 @media only screen and (max-width: 600px) {
     .parallax {
@@ -68,5 +87,9 @@ nav ul li a {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    #footer.menu {
+        display: block;
+        float: left;
     }
 }
